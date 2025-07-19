@@ -1,0 +1,84 @@
+
+
+
+/* Botão premium, tamanho e alinhamento ideal para card */
+.choiceButton {
+  background: linear-gradient(120deg, #fff8f3 70%, #ffe7d6 100%);
+  color: #f46b2a;
+  border: 1.5px solid #ffd7b3;
+  border-radius: 14px;
+  padding: 12px 12px;
+  margin: 8px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 16px rgba(244,107,42,0.08);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  width: 100%;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2px;
+  transition:
+    border-color 0.18s,
+    background 0.19s,
+    box-shadow 0.19s,
+    transform 0.11s;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.choiceLabel {
+  font-size: 0.93rem;
+  color: #b8b8b8;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 1px;
+  display: block;
+}
+
+.choiceText {
+  font-size: 1.07rem;
+  color: #f46b2a;
+  font-weight: 700;
+  line-height: 1.28;
+  margin-top: 1px;
+  letter-spacing: 0;
+  display: block;
+}
+
+.choiceButton:hover:not(:disabled),
+.choiceButton:focus-visible {
+  background: linear-gradient(120deg, #fff0e6 70%, #ffcba6 100%);
+  border-color: #ffaf70;
+  color: #e65610;
+  box-shadow: 0 10px 32px rgba(244,107,42,0.16);
+  transform: scale(1.028);
+}
+
+.choiceButton:active:not(:disabled) {
+  transform: scale(0.97);
+  filter: brightness(0.98);
+}
+
+.choiceButton:disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .choiceButton {
+    padding: 8px 4px;
+    font-size: 0.93rem;
+    max-width: 98vw;
+  }
+  .choiceText {
+    font-size: 0.97rem;
+  }
+}
