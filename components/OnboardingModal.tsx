@@ -63,7 +63,7 @@ export default function OnboardingModal({ isVisible, onComplete }: OnboardingMod
   const currentStepData = onboardingSteps[currentStep];
 
   return (
-    <div className="fixed inset-0 bg-background/95 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+    <div className="fixed inset-0 bg-background/95 backdrop-blur-sm flex items-center justify-center p-4 z-50" style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}>
       <Card className="bg-gradient-card border-border/20 shadow-glow max-w-md w-full p-6 animate-scale-in">
         
         {/* Progress Indicator */}
@@ -127,7 +127,8 @@ export default function OnboardingModal({ isVisible, onComplete }: OnboardingMod
         <div className="text-center mt-4">
           <button
             onClick={onComplete}
-            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            style={{ cursor: 'pointer' }}
           >
             Pular introdução
           </button>

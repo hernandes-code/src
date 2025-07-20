@@ -14,12 +14,16 @@ export interface GameCard {
     effects: Partial<GameMetrics>;
     consequence: string;
     tip?: string;
+    category?: string;
+    teachingMoment?: string;
   };
   rightChoice: {
     text: string;
     effects: Partial<GameMetrics>;
     consequence: string;
     tip?: string;
+    category?: string;
+    teachingMoment?: string;
   };
   icon: string;
   educationalContent?: string;
@@ -42,7 +46,18 @@ export interface GameState {
     cardId: string;
     choice: 'left' | 'right';
     points: number;
+    category?: string;
   }>;
+  choiceCategories: {
+    strategic: number;
+    organized: number;
+    platform_user: number;
+    data_driven: number;
+    creative: number;
+    relationship_focused: number;
+    inclusive: number;
+    proactive: number;
+  };
 }
 
 export interface LeadData {

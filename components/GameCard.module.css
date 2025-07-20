@@ -1,17 +1,17 @@
 
 
 
-/* Botão premium, tamanho e alinhamento ideal para card */
+/* Botão premium, tamanho e alinhamento ideal para card - versão compacta */
 .choiceButton {
   background: linear-gradient(120deg, #fff8f3 70%, #ffe7d6 100%);
   color: #f46b2a;
   border: 1.5px solid #ffd7b3;
   border-radius: 14px;
-  padding: 12px 12px;
-  margin: 8px 0;
+  padding: 10px 10px;
+  margin: 6px 0;
   cursor: pointer;
   box-shadow: 0 2px 16px rgba(244,107,42,0.08);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-family: inherit;
   font-weight: 600;
   width: 100%;
@@ -23,32 +23,41 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 2px;
+  gap: 1px;
   transition:
-    border-color 0.18s,
-    background 0.19s,
-    box-shadow 0.19s,
-    transform 0.11s;
+    border-color 0.1s,
+    background 0.12s,
+    box-shadow 0.12s,
+    transform 0.08s;
   word-break: break-word;
   white-space: normal;
   overflow-wrap: anywhere;
+  /* CSS fixes para problemas de clique */
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
 }
 
 .choiceLabel {
-  font-size: 0.93rem;
+  font-size: 0.88rem;
   color: #b8b8b8;
   font-weight: 500;
   letter-spacing: 0.04em;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
   display: block;
 }
 
 .choiceText {
-  font-size: 1.07rem;
+  font-size: 1rem;
   color: #f46b2a;
   font-weight: 700;
-  line-height: 1.28;
-  margin-top: 1px;
+  line-height: 1.25;
+  margin-top: 0px;
   letter-spacing: 0;
   display: block;
 }
@@ -75,10 +84,14 @@
 @media (max-width: 600px) {
   .choiceButton {
     padding: 8px 4px;
-    font-size: 0.93rem;
+    font-size: 0.9rem;
     max-width: 98vw;
+    margin: 4px 0;
   }
   .choiceText {
-    font-size: 0.97rem;
+    font-size: 0.95rem;
+  }
+  .choiceLabel {
+    font-size: 0.85rem;
   }
 }

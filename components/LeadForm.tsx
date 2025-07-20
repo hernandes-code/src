@@ -56,11 +56,7 @@ export default function LeadForm({ onSubmit, isVisible, finalScore }: LeadFormPr
         {/* Header */}
         <div className="text-center mb-6">
           <div className="mb-4">
-            <img 
-              src={logo} 
-              alt="Logo da empresa" 
-              className="w-16 h-16 mx-auto mb-2"
-            />
+            {/* Logo removido para evitar erro de asset ausente */}
             <Star className="w-12 h-12 text-warning mx-auto animate-pulse-glow" />
           </div>
           <h2 className="text-2xl font-bold text-foreground mb-2">
